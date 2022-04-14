@@ -1,0 +1,20 @@
+html {
+  font-size: 62.5%; }
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none; }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+
+/*# sourceMappingURL=main.css.map */

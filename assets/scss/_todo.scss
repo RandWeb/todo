@@ -1,0 +1,195 @@
+.todo {
+    background-color: $colorPrimary;
+    height: 70rem;
+    width: 35rem;
+    border-radius: 2rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    &__nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3rem 4rem;
+        font-size: 2rem;
+        color: $colorSecondary;
+
+        &--icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            i {
+                margin: 0 .5rem;
+            }
+        }
+    }
+
+    &__heading {
+        width: 100%;
+        color: $colorOnprimary;
+        text-transform: capitalize;
+        text-align: start;
+        padding: 1rem 4rem;
+        font-size: 3rem;
+        letter-spacing: .1rem;
+    }
+
+    &__categories {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        padding: 3rem 4rem;
+        overflow-x: hidden;
+
+        &--heading {
+            color: $colorOnSecondary;
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-transform: capitalize;
+
+        }
+
+        &--list {
+            width: inherit;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+
+            .item__wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                overflow-x: scroll;
+            }
+
+            &--item {
+                width: 15rem;
+                margin: 1rem .5rem;
+                color: $colorOnSecondary;
+                background-color: $colorOnSecondary;
+                border-radius: 1rem;
+                padding: 2rem;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                .category__item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    &--total {
+                        color: $colorOnAccent;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        padding: .5rem 0;
+                    }
+
+                    &--title {
+                        color: $colorOnprimary;
+                        font-weight: 700;
+                        font-size: 1.8rem;
+                        letter-spacing: .1rem;
+                        padding: .5rem 0;
+                    }
+
+                    &--progress {
+                        width: 100%;
+                        height: .2rem;
+                        margin-top: 1rem;
+                        background-color: $colorOnAccent;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 60%;
+                            height: inherit;
+                            background-color: $colorAccent;
+                            box-shadow:
+                                $colorAccent 0px 4px 16px,
+                                $colorAccent 0px 8px 24px,
+                                $colorAccent 0px 16px 56px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    &__tasks{
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        width: 100%;
+        height: 47%;
+        &--heading{
+            color: $colorSecondary;
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+        .task__wrapper{
+            width: 100%;
+            overflow-y: scroll;
+            height: 100%;
+
+            .todo__task{
+                color: $colorOnprimary;
+                border-radius: 1rem;
+                width: 98%;
+                height: 5rem;
+                margin: .4rem 0;
+                background-color: $colorOnSecondary;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                &--check{
+                    width: 2rem;
+                    height: 2rem;
+                    background-color: transparent;
+                    border: .2rem solid $colorAccent;
+                    border-radius: 50%;
+                    margin: 0 1rem;
+                    cursor: pointer;
+                }
+                &--title{
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                }
+            }
+        }
+       
+    }
+
+    &__task--add{
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $colorAccent;
+
+        i{
+            color: $colorOnprimary;
+            font-size: 1.8rem;
+        }
+    }
+}
